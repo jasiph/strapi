@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todo_lists",
+  "info": {
+    "name": "Todo List"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "waktu": {
+      "type": "datetime"
+    },
+    "kegiatan": {
+      "type": "string"
+    },
+    "selesai": {
+      "type": "boolean"
+    }
+  }
+}

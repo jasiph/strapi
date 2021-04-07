@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rayons",
+  "info": {
+    "name": "Rayon"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "churches": {
+      "via": "rayon",
+      "collection": "church"
+    }
+  }
+}

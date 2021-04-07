@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "churches",
+  "info": {
+    "name": "Church",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "church_id": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Jemaat",
+        "Gerbang"
+      ]
+    },
+    "rayon": {
+      "model": "rayon",
+      "via": "churches"
+    },
+    "foto": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
